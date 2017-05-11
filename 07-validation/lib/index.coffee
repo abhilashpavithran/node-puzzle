@@ -1,7 +1,5 @@
 # Build your comprehensive validation function here!
 # Feel free to use any third party librarys from NPM (http://npmjs.org) for data validation.
-hexColorRegex = require('hex-color-regex')
-isHexcolor = require('is-hexcolor')
 
 exports.validate = (data) ->
 
@@ -32,8 +30,6 @@ exports.validate = (data) ->
 
 	unless 0 <= data.taxRate <= 1 then return false
 
-    #if !isHexcolor(data.favouriteColour) then false
-    #unless /^(\#(?:[0-9a-fA-F]{3}){1,2})?$/.test data.favouriteColour then return false
 	unless hexColorRegex.test data.favouriteColour then return false
 	
 	unless validateInterest(data.interests) then return false

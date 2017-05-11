@@ -26,7 +26,6 @@ test.describe 'Adslot website', ->
     
     browser.findElements(webdriver.By.css('.ui-tabs-nav h4, .ui-tabs-nav h2')).then (menuItems) ->
       assert menuItems.length, 8
-      console.log menuItems.length
 
   test.it 'should contain a form on "contact us" page', ->
     
